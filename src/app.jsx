@@ -206,9 +206,14 @@ export default function App() {
               alt="Company Logo"
               style={styles.logo}
             />
-            <h1 style={styles.mainTitle}>
-              Wind Turbine Intelligence
-            </h1>
+            <div>
+              <h1 style={styles.mainTitle}>
+                Wind Turbine Intelligence
+              </h1>
+              <p style={styles.subtitle}>
+                Real-time analytics across U.S. wind energy assets
+              </p>
+            </div>
           </div>
         </header>
 
@@ -216,10 +221,10 @@ export default function App() {
         {/* KPI */}
         <section style={styles.kpiRow}>
 
-          <KpiBox title="Total Turbines" value={kpis?.meta?.unique_turbines ?? "N/A"} />
-          <KpiBox title="Top State" value={kpis?.top_states?.[0]?.t_state ?? "N/A"} />
-          <KpiBox title="Top Year" value={kpis?.top_years?.at(-1)?.p_year ?? "N/A"} />
-          <KpiBox title="Top Manufacturer" value={kpis?.top_manufacturers?.[0]?.t_manu ?? "N/A"} />
+          <KpiBox title="Turbines Deployed" value={kpis?.meta?.unique_turbines ?? "N/A"} />
+          <KpiBox title="Leading State" value={kpis?.top_states?.[0]?.t_state ?? "N/A"} />
+          <KpiBox title="Peak Installation Year" value={kpis?.top_years?.at(-1)?.p_year ?? "N/A"} />
+          <KpiBox title="Leading Manufacturer" value={kpis?.top_manufacturers?.[0]?.t_manu ?? "N/A"} />
 
         </section>
 
@@ -227,11 +232,11 @@ export default function App() {
         {/* ROW 1 */}
         <section style={styles.row3}>
 
-          <BarBox title="Top States" data={kpis?.top_states ?? []} x="t_state" y="count" />
-          <BarBox title="Top Years" data={kpis?.top_years ?? []} x="p_year" y="count" />
+          <BarBox title="Turbines by State" data={kpis?.top_states ?? []} x="t_state" y="count" />
+          <BarBox title="Installations by Year" data={kpis?.top_years ?? []} x="p_year" y="count" />
 
           <PieBox
-            title="Onshore vs Offshore"
+            title="Onshore vs Offshore Turbines"
             data={kpis?.onshore_offshore ?? []}
             name="type"
             value="count"
@@ -243,11 +248,11 @@ export default function App() {
         {/* ROW 2 */}
         <section style={styles.row3}>
 
-          <BarBox title="Top Manufacturers" data={kpis?.top_manufacturers ?? []} x="t_manu" y="count" />
-          <BarBox title="Top Counties" data={kpis?.top_counties ?? []} x="t_county" y="count" />
+          <BarBox title="Turbines by Manufacturer" data={kpis?.top_manufacturers ?? []} x="t_manu" y="count" />
+          <BarBox title="Turbines by County" data={kpis?.top_counties ?? []} x="t_county" y="count" />
 
           <BarBox
-            title="Capacity (2015–2025)"
+            title="Installed Capacity (2015–2025)"
             data={kpis?.capacity_2015_2025 ?? []}
             x="p_year"
             y="total_capacity"
@@ -260,17 +265,17 @@ export default function App() {
         {/* ROW 3 */}
         <section style={styles.row3}>
 
-          <BarBox title="Organization Size" data={kpis?.org_size_distribution ?? []} x="bucket" y="org_count" />
+          <BarBox title="Operators by Fleet Size" data={kpis?.org_size_distribution ?? []} x="bucket" y="org_count" />
 
           <TallPieBox
-            title="Organization Type"
+            title="Operator Type Breakdown"
             data={kpis?.org_type_distribution ?? []}
             name="org_type"
             value="count"
           />
 
           <TallPieBox
-            title="Country Distribution"
+            title="Turbines by Country"
             data={kpis?.country_distribution ?? []}
             name="country"
             value="count"
@@ -283,7 +288,7 @@ export default function App() {
         <section style={styles.row2}>
 
           <StatePieBox
-            title="State Distribution"
+            title="Turbines by State/Province"
             data={kpis?.state_province_distribution ?? []}
             name="state"
             value="count"
@@ -554,12 +559,14 @@ const styles = {
 
   dashboard: {
     flex: 1,
-    padding: 20,
+    padding: "24px 28px",
     overflowY: "auto"
   },
 
   headerBox: {
-    marginBottom: 28
+    marginBottom: 24,
+    paddingBottom: 18,
+    borderBottom: "1px solid #1e293b"
   },
 
   headerRow: {
@@ -569,66 +576,83 @@ const styles = {
   },
 
   logo: {
-    height: 52,
+    height: 48,
     width: "auto",
     objectFit: "contain"
   },
 
   mainTitle: {
-    fontSize: 36,
+    fontSize: 28,
     fontWeight: "700",
-    color: "#f87171"
+    color: "#f87171",
+    lineHeight: 1.2,
+    margin: 0
+  },
+
+  subtitle: {
+    fontSize: 12,
+    color: "#64748b",
+    margin: "2px 0 0",
+    fontWeight: 400,
+    letterSpacing: 0.3
   },
 
   kpiRow: {
     display: "grid",
     gridTemplateColumns: "repeat(4,1fr)",
-    gap: 16,
-    marginBottom: 22
+    gap: 14,
+    marginBottom: 20
   },
 
   kpiBox: {
-    background: "#020617",
+    background: "#0f172a",
     border: "1px solid #1e293b",
-    borderRadius: 10,
-    padding: 14,
+    borderTop: "2px solid #f87171",
+    borderRadius: 8,
+    padding: "14px 12px",
     textAlign: "center"
   },
 
   kpiTitle: {
-    fontSize: 12,
-    color: "#94a3b8"
+    fontSize: 11,
+    color: "#64748b",
+    textTransform: "uppercase",
+    letterSpacing: 0.5,
+    marginBottom: 4
   },
 
   kpiValue: {
-    fontSize: 24,
-    fontWeight: "bold"
+    fontSize: 22,
+    fontWeight: "700",
+    color: "#f1f5f9"
   },
 
   row3: {
     display: "grid",
     gridTemplateColumns: "repeat(3,1fr)",
-    gap: 16,
-    marginBottom: 20
+    gap: 14,
+    marginBottom: 18
   },
 
   row2: {
     display: "grid",
     gridTemplateColumns: "repeat(2,1fr)",
-    gap: 16,
-    marginBottom: 20
+    gap: 14,
+    marginBottom: 18
   },
 
   card: {
-    background: "#020617",
+    background: "#0f172a",
     border: "1px solid #1e293b",
     borderRadius: 10,
-    padding: 14
+    padding: "16px 14px"
   },
 
   cardTitle: {
-    fontSize: 14,
-    marginBottom: 6
+    fontSize: 13,
+    fontWeight: 600,
+    color: "#94a3b8",
+    marginBottom: 8
   },
 
   chatPanel: {
@@ -636,14 +660,16 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     borderLeft: "1px solid #1e293b",
-    background: "#020617"
+    background: "#0a0f1e"
   },
 
   chatHeader: {
-    padding: 14,
+    padding: "14px 16px",
     fontWeight: "600",
+    fontSize: 14,
     borderBottom: "1px solid #1e293b",
-    color: "#f87171"
+    color: "#f87171",
+    letterSpacing: 0.3
   },
 
   chatBody: {
@@ -652,35 +678,41 @@ const styles = {
     overflowY: "auto",
     display: "flex",
     flexDirection: "column",
-    gap: 8
+    gap: 10
   },
 
   chatMessage: {
-    padding: "8px 12px",
-    borderRadius: 10,
+    padding: "10px 14px",
+    borderRadius: 12,
     maxWidth: "80%",
-    fontSize: 13
+    fontSize: 13,
+    lineHeight: 1.5
   },
 
   chatInputRow: {
     display: "flex",
-    borderTop: "1px solid #1e293b"
+    borderTop: "1px solid #1e293b",
+    background: "#020617"
   },
 
   chatInput: {
     flex: 1,
-    padding: 12,
-    background: "#020617",
+    padding: "12px 14px",
+    background: "transparent",
     border: "none",
     color: "white",
-    outline: "none"
+    outline: "none",
+    fontSize: 13
   },
 
   chatButton: {
-    padding: "0 18px",
+    padding: "0 20px",
     background: "#f87171",
     border: "none",
     color: "white",
-    cursor: "pointer"
+    cursor: "pointer",
+    fontWeight: 600,
+    fontSize: 13,
+    borderRadius: 0
   }
 };
