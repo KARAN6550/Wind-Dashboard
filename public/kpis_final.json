@@ -1,0 +1,336 @@
+{
+  "top_states": [
+    {
+      "t_state": "TX",
+      "count": 19393
+    },
+    {
+      "t_state": "IA",
+      "count": 6461
+    },
+    {
+      "t_state": "OK",
+      "count": 5624
+    },
+    {
+      "t_state": "CA",
+      "count": 4902
+    },
+    {
+      "t_state": "KS",
+      "count": 4415
+    }
+  ],
+  "top_years": [
+    {
+      "p_year": 2008.0,
+      "count": 4827
+    },
+    {
+      "p_year": 2009.0,
+      "count": 5697
+    },
+    {
+      "p_year": 2011.0,
+      "count": 3494
+    },
+    {
+      "p_year": 2012.0,
+      "count": 6661
+    },
+    {
+      "p_year": 2015.0,
+      "count": 4304
+    },
+    {
+      "p_year": 2016.0,
+      "count": 3814
+    },
+    {
+      "p_year": 2017.0,
+      "count": 4348
+    },
+    {
+      "p_year": 2019.0,
+      "count": 3583
+    },
+    {
+      "p_year": 2020.0,
+      "count": 6231
+    },
+    {
+      "p_year": 2021.0,
+      "count": 4491
+    }
+  ],
+  "top_manufacturers": [
+    {
+      "t_manu": "GE Wind",
+      "count": 34799
+    },
+    {
+      "t_manu": "Vestas",
+      "count": 17816
+    },
+    {
+      "t_manu": "Siemens",
+      "count": 4675
+    },
+    {
+      "t_manu": "Gamesa",
+      "count": 2967
+    },
+    {
+      "t_manu": "Siemens Gamesa Renewable Energy",
+      "count": 2790
+    },
+    {
+      "t_manu": "Mitsubishi",
+      "count": 2200
+    },
+    {
+      "t_manu": "Nordex",
+      "count": 1984
+    },
+    {
+      "t_manu": "Suzlon",
+      "count": 1137
+    },
+    {
+      "t_manu": "Acciona",
+      "count": 758
+    },
+    {
+      "t_manu": "REpower",
+      "count": 559
+    }
+  ],
+  "top_counties": [
+    {
+      "t_county": "Kern County",
+      "count": 3250
+    },
+    {
+      "t_county": "Lincoln County",
+      "count": 1630
+    },
+    {
+      "t_county": "Nolan County",
+      "count": 1400
+    },
+    {
+      "t_county": "Logan County",
+      "count": 873
+    },
+    {
+      "t_county": "Torrance County",
+      "count": 768
+    },
+    {
+      "t_county": "Gilliam County",
+      "count": 736
+    },
+    {
+      "t_county": "Benton County",
+      "count": 709
+    },
+    {
+      "t_county": "Scurry County",
+      "count": 685
+    },
+    {
+      "t_county": "Willacy County",
+      "count": 680
+    },
+    {
+      "t_county": "Ford County",
+      "count": 650
+    }
+  ],
+  "capacity_2015_2025": [
+    {
+      "p_year": 2015,
+      "total_capacity": 8592978.0
+    },
+    {
+      "p_year": 2016,
+      "total_capacity": 8204322.0
+    },
+    {
+      "p_year": 2017,
+      "total_capacity": 9162040.0
+    },
+    {
+      "p_year": 2018,
+      "total_capacity": 7465005.0
+    },
+    {
+      "p_year": 2019,
+      "total_capacity": 9097710.0
+    },
+    {
+      "p_year": 2020,
+      "total_capacity": 17044230.0
+    },
+    {
+      "p_year": 2021,
+      "total_capacity": 13148200.0
+    },
+    {
+      "p_year": 2022,
+      "total_capacity": 8526891.0
+    },
+    {
+      "p_year": 2023,
+      "total_capacity": 6587650.0
+    },
+    {
+      "p_year": 2024,
+      "total_capacity": 4166240.0
+    },
+    {
+      "p_year": 2025,
+      "total_capacity": 1840960.0
+    }
+  ],
+  "onshore_offshore": [
+    {
+      "type": "onshore",
+      "count": 75338
+    },
+    {
+      "type": "offshore",
+      "count": 79
+    }
+  ],
+  "org_size_distribution": [
+    {
+      "bucket": "2",
+      "org_count": 102
+    },
+    {
+      "bucket": "3",
+      "org_count": 51
+    },
+    {
+      "bucket": "4",
+      "org_count": 26
+    },
+    {
+      "bucket": "5",
+      "org_count": 26
+    },
+    {
+      "bucket": "5+",
+      "org_count": 1217
+    }
+  ],
+  "org_type_distribution": [
+    {
+      "org_type": "Other",
+      "count": 71414
+    },
+    {
+      "org_type": "Government",
+      "count": 3264
+    },
+    {
+      "org_type": "Private",
+      "count": 688
+    },
+    {
+      "org_type": "Education",
+      "count": 27
+    },
+    {
+      "org_type": "Cooperative",
+      "count": 24
+    }
+  ],
+  "country_distribution": [
+    {
+      "country": "USA",
+      "count": 34800
+    },
+    {
+      "country": "Denmark",
+      "count": 17816
+    },
+    {
+      "country": "Germany",
+      "count": 9449
+    },
+    {
+      "country": "Others",
+      "count": 8982
+    },
+    {
+      "country": "Spain",
+      "count": 2967
+    },
+    {
+      "country": "India",
+      "count": 1137
+    },
+    {
+      "country": "China",
+      "count": 242
+    },
+    {
+      "country": "France",
+      "count": 24
+    }
+  ],
+  "state_province_distribution": [
+    {
+      "state": "TX",
+      "count": 19393
+    },
+    {
+      "state": "IA",
+      "count": 6461
+    },
+    {
+      "state": "OK",
+      "count": 5624
+    },
+    {
+      "state": "CA",
+      "count": 4902
+    },
+    {
+      "state": "KS",
+      "count": 4415
+    },
+    {
+      "state": "IL",
+      "count": 3837
+    },
+    {
+      "state": "CO",
+      "count": 2903
+    },
+    {
+      "state": "MN",
+      "count": 2726
+    },
+    {
+      "state": "NM",
+      "count": 2301
+    },
+    {
+      "state": "OR",
+      "count": 2190
+    },
+    {
+      "state": "Others",
+      "count": 20591
+    }
+  ],
+  "meta": {
+    "source_file": "uswtdb_V8_2_20251210.csv",
+    "rows": 75417,
+    "unique_turbines": 75417,
+    "country_method": "manufacturer_origin"
+  }
+}
