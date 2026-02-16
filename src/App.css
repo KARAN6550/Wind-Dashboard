@@ -1,42 +1,190 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* ===============================
+   MARKDOWN CHAT STYLES
+================================ */
+
+.md-chat {
+  line-height: 1.6;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.md-chat > *:first-child {
+  margin-top: 0;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.md-chat > *:last-child {
+  margin-bottom: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Headings */
+.md-chat h1 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 10px 0 6px;
+  color: #f87171;
+  border-bottom: 1px solid #334155;
+  padding-bottom: 4px;
 }
 
-.card {
-  padding: 2em;
+.md-chat h2 {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 10px 0 6px;
+  color: #f87171;
 }
 
-.read-the-docs {
-  color: #888;
+.md-chat h3 {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 8px 0 4px;
+  color: #fbbf24;
+}
+
+.md-chat h4,
+.md-chat h5,
+.md-chat h6 {
+  font-size: 12px;
+  font-weight: 600;
+  margin: 6px 0 4px;
+  color: #94a3b8;
+}
+
+/* Paragraphs */
+.md-chat p {
+  margin: 6px 0;
+  font-size: 13px;
+  color: #e2e8f0;
+}
+
+/* Bold & italic */
+.md-chat strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.md-chat em {
+  color: #cbd5e1;
+  font-style: italic;
+}
+
+/* Lists */
+.md-chat ul {
+  margin: 6px 0;
+  padding-left: 18px;
+  list-style-type: disc;
+}
+
+.md-chat ol {
+  margin: 6px 0;
+  padding-left: 18px;
+  list-style-type: decimal;
+}
+
+.md-chat li {
+  font-size: 13px;
+  color: #e2e8f0;
+  margin-bottom: 3px;
+  line-height: 1.5;
+}
+
+.md-chat li::marker {
+  color: #f87171;
+}
+
+/* Nested lists */
+.md-chat ul ul,
+.md-chat ol ul {
+  list-style-type: circle;
+  margin: 2px 0;
+}
+
+.md-chat ul ol,
+.md-chat ol ol {
+  margin: 2px 0;
+}
+
+/* Inline code */
+.md-chat code {
+  background: #0f172a;
+  color: #38bdf8;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-family: "Fira Code", "Cascadia Code", "Consolas", monospace;
+}
+
+/* Code blocks */
+.md-chat pre {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 6px;
+  padding: 10px 12px;
+  margin: 8px 0;
+  overflow-x: auto;
+}
+
+.md-chat pre code {
+  background: none;
+  padding: 0;
+  font-size: 12px;
+  color: #e2e8f0;
+  white-space: pre;
+}
+
+/* Blockquotes */
+.md-chat blockquote {
+  border-left: 3px solid #f87171;
+  margin: 8px 0;
+  padding: 4px 10px;
+  background: rgba(248, 113, 113, 0.06);
+  color: #cbd5e1;
+  font-size: 13px;
+}
+
+.md-chat blockquote p {
+  margin: 2px 0;
+}
+
+/* Tables */
+.md-chat table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 8px 0;
+  font-size: 12px;
+}
+
+.md-chat th {
+  background: #0f172a;
+  color: #f87171;
+  font-weight: 600;
+  text-align: left;
+  padding: 6px 8px;
+  border: 1px solid #334155;
+}
+
+.md-chat td {
+  padding: 5px 8px;
+  border: 1px solid #1e293b;
+  color: #e2e8f0;
+}
+
+.md-chat tr:nth-child(even) {
+  background: rgba(15, 23, 42, 0.5);
+}
+
+/* Horizontal rule */
+.md-chat hr {
+  border: none;
+  border-top: 1px solid #334155;
+  margin: 10px 0;
+}
+
+/* Links */
+.md-chat a {
+  color: #38bdf8;
+  text-decoration: underline;
+}
+
+.md-chat a:hover {
+  color: #7dd3fc;
 }

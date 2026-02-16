@@ -1,5 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import axios from "axios";
+import ReactMarkdown from "react-markdown";
+import "./App.css";
 
 import {
   BarChart,
@@ -198,9 +200,16 @@ export default function App() {
 
         {/* HEADER */}
         <header style={styles.headerBox}>
-          <h1 style={styles.mainTitle}>
-            Wind Turbine Intelligence
-          </h1>
+          <div style={styles.headerRow}>
+            <img
+              src="/cw-logo2026.png"
+              alt="Company Logo"
+              style={styles.logo}
+            />
+            <h1 style={styles.mainTitle}>
+              Wind Turbine Intelligence
+            </h1>
+          </div>
         </header>
 
 
@@ -303,10 +312,17 @@ export default function App() {
               style={{
                 ...styles.chatMessage,
                 alignSelf: msg.role === "user" ? "flex-end" : "flex-start",
-                background: msg.role === "user" ? "#2563eb" : "#1e293b"
+                background: msg.role === "user" ? "#2563eb" : "#1e293b",
+                maxWidth: msg.role === "assistant" ? "92%" : "80%"
               }}
             >
-              {msg.content}
+              {msg.role === "assistant" ? (
+                <div className="md-chat">
+                  <ReactMarkdown>{msg.content}</ReactMarkdown>
+                </div>
+              ) : (
+                msg.content
+              )}
             </div>
 
           ))}
@@ -544,6 +560,18 @@ const styles = {
 
   headerBox: {
     marginBottom: 28
+  },
+
+  headerRow: {
+    display: "flex",
+    alignItems: "center",
+    gap: 16
+  },
+
+  logo: {
+    height: 52,
+    width: "auto",
+    objectFit: "contain"
   },
 
   mainTitle: {
