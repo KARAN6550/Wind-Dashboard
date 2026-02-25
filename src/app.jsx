@@ -406,7 +406,14 @@ function BarBox({ data, x, y, title, formatY = false }) {
             tickFormatter={formatY ? formatNumber : undefined}
           />
 
-          <Tooltip />
+          <Tooltip
+            cursor={{ fill: "rgba(148,163,184,0.15)" }}
+            contentStyle={{ backgroundColor: "#1e293b", border: "1px solid #334155", borderRadius: 8 }}
+            labelStyle={{ color: "#f8fafc", fontWeight: 600, marginBottom: 4 }}
+            itemStyle={{ color: "#f87171" }}
+            formatter={(value) => [formatNumber(value), y]}
+            labelFormatter={(label) => `${x}: ${label}`}
+          />
 
           <Bar
             dataKey={y}
